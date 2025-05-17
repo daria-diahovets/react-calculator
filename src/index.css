@@ -75,3 +75,36 @@ a {
   padding-top: 35px;
   font-size: 2.5rem;
 }
+
+@media(max-width: 1920px) {
+  .wrapper {
+    padding: 1.85vw;
+  }
+
+  h1 {
+    font-size: 2.5vw;
+    margin-top: 2.6vw;
+  }
+
+  .copyright {
+    padding-top: 1.8vw;
+    font-size: 1.6vw;
+  }
+}
+
+@media(max-width: 768px) {
+  .wrapper {
+    padding: 5.3vw;
+    min-height: 100dvh;
+  }
+
+  h1 {
+    font-size: 7.1vw;
+    margin-top: auto;
+  }
+
+  .copyright {
+    padding-top: 2.7vw;
+    font-size: 4vw;
+  }
+}

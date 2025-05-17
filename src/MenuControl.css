@@ -22,6 +22,11 @@
   transition: all .2s;
 }
 
+.menu button svg {
+  width: 40px;
+  height: 40px;
+}
+
 @media (hover: hover) and (pointer: fine) {
   .menu button:hover {
     filter: brightness(90%);
@@ -70,6 +75,7 @@
   box-shadow: 2px 2px 0px var(--shadow-color);
   cursor: pointer;
   transition: all .3s;
+  user-select: none;
 }
 
 .themes span.active {
@@ -81,9 +87,11 @@
     transform: translateY(-5px);
   }
 }
+
 .themes span:active {
   transform: translateY(5px);
 }
+
 .themes span:nth-child(1) {
   background-color: #C5DEF2;
 }
@@ -102,4 +110,106 @@
 
 .themes span:nth-child(5) {
   background-color: #DBCDF0;
+}
+
+@media(max-width: 1920px) {
+  .menu {
+    gap: 0.8vw;
+    top: 1.8vw;
+    left: 1.8vw;
+  }
+
+  .menu button {
+    width: 3.15vw;
+    border: .22vw solid var(--shadow-color);
+    box-shadow: 0.22vw 0.22vw 0px var(--shadow-color);
+  }
+
+  .menu button svg {
+    width: 2.1vw;
+    height: 2.1vw;
+  }
+
+  .menu button:active {
+    transform: translateY(.25vw);
+    box-shadow: 0.22vw .1vw 0px var(--shadow-color);
+  }
+
+  .themes {
+    gap: 0.8vw;
+    clip-path: inset(-100vw -100vw -100vw 2.9vw);
+  }
+
+  .themes.visible {
+    grid-template-columns: repeat(5, 1.85vw);
+    clip-path: inset(-100vw -100vw -100vw -5.3vw);
+  }
+
+  .themes span {
+    font-size: 0.96vw;
+    width: 1.85vw;
+    border: 0.16vw solid var(--shadow-color);
+    box-shadow: .1vw .1vw 0px var(--shadow-color);
+  }
+
+  @media (hover: hover) and (pointer:fine) {
+    .themes span:hover {
+      transform: translateY(-0.25vw);
+    }
+  }
+
+  .themes span:active {
+    transform: translateY(0.25vw);
+  }
+}
+
+@media(max-width: 768px) {
+  .menu {
+    gap: 2vw;
+    top: 2.7vw;
+    left: 2.7vw;
+  }
+
+  .menu button {
+    width: 7.9vw;
+    border: 0.6vw solid var(--shadow-color);
+    box-shadow: 0.6vw 0.6vw 0px var(--shadow-color);
+  }
+
+  .menu button svg {
+    width: 5.3vw;
+    height: 5.3vw;
+  }
+
+  .menu button:active {
+    transform: translateY(0.7vw);
+    box-shadow: 0.6vw 0.3vw 0px var(--shadow-color);
+  }
+
+  .themes {
+    gap: 2vw;
+    clip-path: inset(-100vw -100vw -100vw 7.2vw);
+  }
+
+  .themes.visible {
+    grid-template-columns: repeat(5, 4.6vw);
+    clip-path: inset(-100vw -100vw -100vw -13.1vw);
+  }
+
+  .themes span {
+    font-size: 2.4vw;
+    width: 4.6vw;
+    border: 0.4vw solid var(--shadow-color);
+    box-shadow: 0.3vw 0.3vw 0px var(--shadow-color);
+  }
+
+  @media (hover: hover) and (pointer:fine) {
+    .themes span:hover {
+      transform: translateY(-0.7vw);
+    }
+  }
+
+  .themes span:active {
+    transform: translateY(0.7vw);
+  }
 }
