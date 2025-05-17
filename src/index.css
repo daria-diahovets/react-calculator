@@ -1,0 +1,77 @@
+.blue-theme {
+  --bg-color: #C5DEF2;
+  --shadow-color: #092235;
+  --main-bg: #FDF6E6;
+}
+
+.green-theme {
+  --bg-color: #C9E4DF;
+  --shadow-color: #062E27;
+  --main-bg: #fffdf4;
+}
+
+.yellow-theme {
+  --bg-color: #FAEDCB;
+  --shadow-color: #322606;
+  --main-bg: #fffcf1;
+}
+
+.pink-theme {
+  --bg-color: #F2C6DF;
+  --shadow-color: #350621;
+  --main-bg: #fdede6;
+}
+
+.purple-theme {
+  --bg-color: #DBCDF0;
+  --shadow-color: #16052F;
+  --main-bg: #f5f7ff;
+}
+
+@font-face {
+  font-family: "Medodica";
+  src: url("/MedodicaRegular.otf");
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 12px;
+  font-family: "Medodica";
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 35px;
+  background-color: var(--bg-color);
+  color: var(--shadow-color);
+  transition: background-color .3s;
+}
+
+h1 {
+  font-size: 4rem;
+  margin-top: 50px;
+}
+
+svg {
+  color: var(--shadow-color);
+}
+
+a {
+  color: inherit;
+}
+
+.copyright {
+  margin-top: auto;
+  padding-top: 35px;
+  font-size: 2.5rem;
+}
